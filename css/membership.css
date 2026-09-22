@@ -1,0 +1,1340 @@
+/**
+ * MAHA HR FORUM — Membership Page Stylesheet (membership.css)
+ * Institutional Authority, Maharashtra Ethos, Royal Navy & Warm Saffron Accent
+ * Adheres strictly to variables.css, base.css, components.css, and header-footer.css
+ */
+
+/* ==========================================================================
+   1. MEMBERSHIP HERO SECTION & BREADCRUMB
+   ========================================================================== */
+.membership-hero {
+  position: relative;
+  background-color: var(--color-surface-warm);
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  overflow: hidden;
+}
+
+.membership-hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(
+    circle,
+    rgba(216, 89, 10, 0.08) 0%,
+    rgba(216, 89, 10, 0.02) 50%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.membership-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -40px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(14, 32, 56, 0.05) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.membership-hero__container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Breadcrumb Navigation */
+.membership-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.membership-breadcrumb a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.membership-breadcrumb a:hover {
+  color: var(--color-amber-600);
+}
+
+.membership-breadcrumb__sep {
+  color: var(--color-border-medium);
+}
+
+.membership-breadcrumb__current {
+  color: var(--color-amber-600);
+  font-weight: var(--fw-bold);
+}
+
+/* Eyebrow Badge */
+.membership-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-amber-600);
+  margin-bottom: var(--space-xs);
+}
+
+.membership-hero__title {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.15;
+  color: var(--color-navy-900);
+  margin-bottom: var(--space-sm);
+  max-width: 980px;
+}
+
+.membership-hero__title-accent {
+  color: var(--color-amber-500);
+  display: block;
+}
+
+.membership-hero__lead {
+  font-size: clamp(1.0625rem, 1.8vw, 1.25rem);
+  line-height: var(--lh-base);
+  color: var(--color-text-body);
+  max-width: 880px;
+  margin-bottom: var(--space-xl);
+}
+
+/* Trust Badges / Chips Group */
+.membership-hero__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: var(--space-xl);
+}
+
+.membership-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-navy-900);
+  background: var(--color-surface-pure);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.membership-chip svg {
+  color: var(--color-amber-500);
+  flex-shrink: 0;
+}
+
+/* In-Page Quick Jump Navigation */
+.membership-quicknav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border-warm);
+}
+
+.membership-quicknav__label {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-right: 0.25rem;
+}
+
+.membership-quicknav__link {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-medium);
+  color: var(--color-navy-800);
+  background-color: var(--color-surface-pure);
+  border: 1px solid var(--color-border-subtle);
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-xs);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.membership-quicknav__link:hover {
+  color: var(--color-amber-600);
+  border-color: var(--color-amber-400);
+  background-color: var(--color-amber-50);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   2. MEMBERSHIP PHILOSOPHY & SECTION 8 CHARTER
+   ========================================================================== */
+.membership-philosophy {
+  background-color: var(--color-surface-pure);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-3xl);
+  align-items: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.philosophy-quote-box {
+  background-color: var(--color-surface-warm);
+  border-left: 4px solid var(--color-amber-500);
+  padding: var(--space-lg) var(--space-xl);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin: var(--space-lg) 0;
+  font-family: var(--font-editorial);
+  font-size: var(--text-lg);
+  font-style: italic;
+  line-height: var(--lh-snug);
+  color: var(--color-navy-900);
+}
+
+.philosophy-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.philosophy-pillar-card {
+  background: var(--color-surface-warm);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+  transition: all var(--transition-normal);
+}
+
+.philosophy-pillar-card:hover {
+  border-color: var(--color-amber-300);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.pillar-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--color-amber-100);
+  color: var(--color-amber-600);
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+}
+
+.pillar-title {
+  font-size: var(--text-base);
+  font-weight: var(--fw-bold);
+  color: var(--color-navy-900);
+  margin-bottom: 0.35rem;
+}
+
+.pillar-desc {
+  font-size: var(--text-xs);
+  line-height: var(--lh-base);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Impact Metrics Bar */
+.membership-metrics-bar {
+  background-color: var(--color-navy-900);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl) var(--space-2xl);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+  color: var(--color-surface-pure);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.membership-metrics-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-amber-500), var(--color-amber-300), var(--color-amber-500));
+}
+
+.metric-item {
+  text-align: center;
+  position: relative;
+}
+
+.metric-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -0.75rem;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.metric-value {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: var(--fw-extrabold);
+  color: var(--color-amber-400);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.metric-label {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-surface-pure);
+  margin-bottom: 0.25rem;
+}
+
+.metric-sub {
+  font-size: 0.8125rem;
+  color: var(--color-text-inverse-muted);
+  line-height: var(--lh-snug);
+  margin: 0;
+}
+
+/* ==========================================================================
+   3. MEMBERSHIP TIERS (MAIN CARDS SECTION)
+   ========================================================================== */
+.membership-tiers-section {
+  background-color: var(--color-surface-warm);
+  border-bottom: 1px solid var(--color-border-subtle);
+  position: relative;
+}
+
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  align-items: stretch;
+  margin-top: var(--space-2xl);
+}
+
+/* Tier Card Styling */
+.tier-card-expanded {
+  background: var(--color-surface-pure);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.tier-card-expanded:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-border-medium);
+}
+
+/* Featured / Recommended Tier Card (Professional) */
+.tier-card-expanded--featured {
+  border: 2px solid var(--color-amber-500);
+  box-shadow: 0 8px 30px rgba(216, 89, 10, 0.12);
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFDFB 100%);
+  transform: scale(1.02);
+  z-index: 2;
+}
+
+.tier-card-expanded--featured:hover {
+  transform: scale(1.02) translateY(-5px);
+  box-shadow: 0 14px 40px rgba(216, 89, 10, 0.18);
+}
+
+.tier-card__ribbon {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--color-amber-600), var(--color-amber-500));
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  padding: 0.35rem 1.15rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(216, 89, 10, 0.35);
+  white-space: nowrap;
+}
+
+.tier-card__header {
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding-bottom: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.tier-card__tier-name {
+  font-size: var(--text-xl);
+  font-weight: var(--fw-extrabold);
+  color: var(--color-navy-900);
+  margin-bottom: 0.35rem;
+}
+
+.tier-card__target {
+  font-size: var(--text-xs);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-muted);
+  line-height: var(--lh-snug);
+  margin-bottom: var(--space-md);
+  min-height: 2.5rem;
+}
+
+.tier-card__price-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.tier-card__currency {
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-navy-900);
+}
+
+.tier-card__price {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4vw, 3.25rem);
+  font-weight: var(--fw-extrabold);
+  line-height: 1;
+  color: var(--color-navy-950);
+}
+
+.tier-card-expanded--featured .tier-card__price {
+  color: var(--color-amber-600);
+}
+
+.tier-card__tenure {
+  font-size: var(--text-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-muted);
+}
+
+.tier-card__tax-note {
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+}
+
+.tier-card__body {
+  flex-grow: 1;
+  margin-bottom: var(--space-xl);
+}
+
+.tier-card__inclusions-title {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-navy-800);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tier-card__inclusions-title::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--color-border-subtle);
+}
+
+.tier-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.tier-card__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: var(--text-sm);
+  color: var(--color-text-body);
+  line-height: 1.45;
+}
+
+.tier-card__item svg {
+  color: var(--color-amber-600);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.tier-card__footer {
+  margin-top: auto;
+}
+
+.tier-card__guarantee {
+  text-align: center;
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+/* ==========================================================================
+   4. FEATURE COMPARISON MATRIX
+   ========================================================================== */
+.membership-comparison-section {
+  background-color: var(--color-surface-pure);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.comparison-table-wrapper {
+  background: var(--color-surface-pure);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  box-shadow: var(--shadow-sm);
+  margin-top: var(--space-2xl);
+  -webkit-overflow-scrolling: touch;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 760px;
+}
+
+.comparison-table thead {
+  background-color: var(--color-navy-900);
+  color: var(--color-surface-pure);
+}
+
+.comparison-table th {
+  padding: var(--space-md) var(--space-lg);
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  font-size: var(--text-sm);
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.comparison-table th.col-feature {
+  width: 40%;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  font-size: var(--text-xs);
+  color: var(--color-text-inverse-muted);
+}
+
+.comparison-table th.col-tier {
+  width: 20%;
+  text-align: center;
+}
+
+.comparison-table th.col-tier--featured {
+  background-color: var(--color-navy-850);
+  border-top: 3px solid var(--color-amber-500);
+}
+
+.comparison-th-tier-title {
+  display: block;
+  font-size: var(--text-base);
+  color: var(--color-surface-pure);
+  margin-bottom: 2px;
+}
+
+.comparison-th-tier-price {
+  font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--color-amber-400);
+}
+
+.comparison-category-row td {
+  background-color: var(--color-surface-warm);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-navy-800);
+  padding: 0.65rem var(--space-lg);
+  border-top: 1px solid var(--color-border-medium);
+  border-bottom: 1px solid var(--color-border-medium);
+}
+
+.comparison-row td {
+  padding: var(--space-md) var(--space-lg);
+  font-size: var(--text-sm);
+  color: var(--color-text-body);
+  border-bottom: 1px solid var(--color-border-subtle);
+  vertical-align: middle;
+}
+
+.comparison-row:nth-child(even) {
+  background-color: #FAFBFD;
+}
+
+.comparison-row:hover {
+  background-color: var(--color-amber-50);
+}
+
+.comparison-row td.cell-feature-title {
+  font-weight: var(--fw-medium);
+  color: var(--color-navy-950);
+}
+
+.comparison-feature-desc {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: var(--fw-regular);
+  margin-top: 2px;
+}
+
+.comparison-row td.cell-center {
+  text-align: center;
+}
+
+.comparison-row td.cell-featured {
+  background-color: rgba(216, 89, 10, 0.02);
+  font-weight: var(--fw-semibold);
+}
+
+.comparison-table tfoot td {
+  padding: var(--space-lg);
+  background-color: var(--color-surface-warm);
+  border-top: 2px solid var(--color-border-medium);
+  text-align: center;
+}
+
+.check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.cross-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #FEE2E2;
+  color: #DC2626;
+  font-size: 0.8125rem;
+}
+
+.badge-inclusion {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: var(--fw-semibold);
+  color: var(--color-navy-800);
+  background: var(--color-surface-subtle);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-border-subtle);
+}
+
+/* ==========================================================================
+   5. 4-STEP ENROLMENT PROCESS
+   ========================================================================== */
+.membership-process-section {
+  background-color: var(--color-surface-warm);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+  position: relative;
+}
+
+.process-step {
+  background: var(--color-surface-pure);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.process-step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-amber-400);
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.step-badge-num {
+  width: 36px;
+  height: 36px;
+  background: var(--color-navy-900);
+  color: var(--color-amber-400);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-extrabold);
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-time {
+  font-family: var(--font-heading);
+  font-size: 0.6875rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-amber-600);
+  background: var(--color-amber-100);
+  padding: 2px 8px;
+  border-radius: var(--radius-xs);
+  text-transform: uppercase;
+}
+
+.step-title {
+  font-size: var(--text-base);
+  font-weight: var(--fw-bold);
+  color: var(--color-navy-900);
+  margin-bottom: 0.5rem;
+}
+
+.step-desc {
+  font-size: var(--text-xs);
+  line-height: var(--lh-base);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ==========================================================================
+   6. INTERACTIVE MEMBERSHIP APPLICATION & LIVE FEE CALCULATOR
+   ========================================================================== */
+.membership-application-section {
+  background-color: var(--color-surface-pure);
+  border-bottom: 1px solid var(--color-border-subtle);
+  position: relative;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: var(--space-2xl);
+  align-items: flex-start;
+  margin-top: var(--space-2xl);
+}
+
+.app-form-panel {
+  background: var(--color-surface-pure);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Tier Switcher Tabs */
+.app-tabs {
+  display: flex;
+  background: var(--color-surface-subtle);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-xl);
+  gap: 4px;
+}
+
+.app-tab-btn {
+  flex: 1;
+  padding: 0.65rem 0.5rem;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.app-tab-btn span.tab-price {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: var(--fw-medium);
+  margin-top: 2px;
+}
+
+.app-tab-btn.active {
+  background: var(--color-navy-900);
+  color: var(--color-surface-pure);
+  box-shadow: var(--shadow-sm);
+}
+
+.app-tab-btn.active span.tab-price {
+  color: var(--color-amber-400);
+}
+
+/* Form Styles */
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--color-navy-900);
+  margin-bottom: 0.35rem;
+}
+
+.form-label span.required {
+  color: #DC2626;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-body);
+  background-color: var(--color-surface-pure);
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--radius-xs);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-amber-500);
+  box-shadow: 0 0 0 3px rgba(216, 89, 10, 0.15);
+}
+
+.form-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: var(--text-xs);
+  color: var(--color-text-body);
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+.form-checkbox-label input[type="checkbox"] {
+  margin-top: 2px;
+  accent-color: var(--color-amber-600);
+  width: 16px;
+  height: 16px;
+}
+
+/* Live Fee & Order Summary Card */
+.app-summary-card {
+  background: var(--color-surface-warm);
+  border: 1px solid var(--color-border-warm);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  position: sticky;
+  top: 90px;
+  box-shadow: var(--shadow-md);
+}
+
+.summary-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.summary-card-title {
+  font-size: var(--text-base);
+  font-weight: var(--fw-bold);
+  color: var(--color-navy-900);
+}
+
+.summary-tier-badge {
+  font-family: var(--font-heading);
+  font-size: 0.6875rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  color: var(--color-amber-700);
+  background: var(--color-amber-100);
+  padding: 2px 8px;
+  border-radius: var(--radius-xs);
+}
+
+.summary-fee-block {
+  background: var(--color-surface-pure);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xs);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.summary-fee-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.summary-fee-row.total {
+  font-size: var(--text-base);
+  font-weight: var(--fw-extrabold);
+  color: var(--color-navy-950);
+  border-top: 1px dashed var(--color-border-medium);
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.summary-fee-row.total .price-tag {
+  color: var(--color-amber-600);
+  font-size: 1.35rem;
+}
+
+.summary-inclusions-preview {
+  margin-bottom: var(--space-lg);
+}
+
+.summary-inclusions-title {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-navy-800);
+  margin-bottom: 0.5rem;
+}
+
+.summary-inclusions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.summary-inclusions-list li {
+  font-size: 0.8125rem;
+  color: var(--color-text-body);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  line-height: 1.35;
+}
+
+.summary-inclusions-list li svg {
+  color: var(--color-success);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.summary-receipt-note {
+  background: rgba(14, 32, 56, 0.04);
+  border-radius: var(--radius-xs);
+  padding: 0.65rem 0.85rem;
+  font-size: 0.75rem;
+  color: var(--color-navy-800);
+  line-height: 1.35;
+  margin-bottom: var(--space-md);
+  border-left: 3px solid var(--color-navy-800);
+}
+
+/* ==========================================================================
+   7. MEMBER SERVICES PORTAL & VERIFICATION
+   ========================================================================== */
+.membership-services-section {
+  background-color: var(--color-surface-warm);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+}
+
+.service-card {
+  background: var(--color-surface-pure);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-heading);
+  font-size: 0.6875rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-amber-600);
+  margin-bottom: var(--space-xs);
+}
+
+.service-card__title {
+  font-size: var(--text-lg);
+  font-weight: var(--fw-bold);
+  color: var(--color-navy-900);
+  margin-bottom: 0.5rem;
+}
+
+.service-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--lh-base);
+  margin-bottom: var(--space-lg);
+}
+
+/* Verification Search Box */
+.verify-input-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.verify-input-group input {
+  flex: 1;
+  padding: 0.65rem 0.85rem;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--radius-xs);
+}
+
+.verify-input-group input:focus {
+  outline: none;
+  border-color: var(--color-amber-500);
+}
+
+.verification-result {
+  margin-top: var(--space-sm);
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-xs);
+  font-size: var(--text-xs);
+  display: none;
+}
+
+.verification-result.is-valid {
+  display: block;
+  background: var(--color-success-bg);
+  border: 1px solid #A7F3D0;
+  color: var(--color-success);
+}
+
+.verification-result.is-invalid {
+  display: block;
+  background: #FEE2E2;
+  border: 1px solid #FECACA;
+  color: #DC2626;
+}
+
+/* Portal Login Quick Form */
+.portal-login-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.portal-login-row input {
+  flex: 1;
+  padding: 0.65rem 0.85rem;
+  font-size: var(--text-sm);
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--radius-xs);
+}
+
+.portal-links-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+}
+
+.portal-links-row a {
+  color: var(--color-amber-600);
+  text-decoration: none;
+}
+
+.portal-links-row a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   8. ESSENTIAL MEMBERSHIP FAQS (ACCORDION)
+   ========================================================================== */
+.membership-faq-section {
+  background-color: var(--color-surface-pure);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.faq-accordion {
+  max-width: 900px;
+  margin: var(--space-2xl) auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.faq-item {
+  background: var(--color-surface-warm);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.faq-item.is-open {
+  border-color: var(--color-amber-400);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-xl);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: var(--fw-bold);
+  color: var(--color-navy-900);
+  transition: color var(--transition-fast);
+}
+
+.faq-trigger:hover {
+  color: var(--color-amber-600);
+}
+
+.faq-chevron {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform var(--transition-normal);
+  color: var(--color-text-muted);
+}
+
+.faq-item.is-open .faq-chevron {
+  transform: rotate(180deg);
+  color: var(--color-amber-600);
+}
+
+.faq-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-content {
+  padding: 0 var(--space-xl) var(--space-lg) var(--space-xl);
+  font-size: var(--text-sm);
+  line-height: var(--lh-base);
+  color: var(--color-text-body);
+  border-top: 1px dashed var(--color-border-subtle);
+  padding-top: var(--space-md);
+}
+
+.faq-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   9. NOTIFICATION TOAST
+   ========================================================================== */
+.membership-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--color-navy-950);
+  color: #ffffff;
+  border-left: 4px solid var(--color-amber-500);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-xl);
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  max-width: 420px;
+  transform: translateY(120%);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+}
+
+.membership-toast.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast-icon {
+  color: var(--color-amber-400);
+  flex-shrink: 0;
+}
+
+.toast-message {
+  font-size: var(--text-xs);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   10. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .tiers-grid {
+    grid-template-columns: 1fr;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tier-card-expanded--featured {
+    transform: none;
+  }
+
+  .tier-card-expanded--featured:hover {
+    transform: translateY(-5px);
+  }
+
+  .membership-metrics-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .metric-item:nth-child(2)::after {
+    display: none;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .app-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-summary-card {
+    position: static;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+@media (max-width: 640px) {
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .membership-metrics-bar {
+    grid-template-columns: 1fr;
+    padding: var(--space-lg);
+  }
+
+  .metric-item::after {
+    display: none !important;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .app-tabs {
+    flex-direction: column;
+  }
+
+  .portal-login-row {
+    flex-direction: column;
+  }
+}
