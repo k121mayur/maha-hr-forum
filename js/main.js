@@ -161,6 +161,12 @@ function initMetricCounter() {
 /**
  * Objectives Charter Real-Time Search, Filtering & Copy Functionality
  */
+/**
+ * Objectives Charter Real-Time Search, Filtering, Copy & Framer Progress Steps Animation
+ */
+/**
+ * Objectives Charter Real-Time Search, Filtering, Copy & Single Continuous Timeline Spine Animation
+ */
 function initObjectivesCharter() {
   const container = document.getElementById('moa-clauses-container');
   if (!container) return;
@@ -171,39 +177,202 @@ function initObjectivesCharter() {
   const counterBadge = document.getElementById('moa-counter-badge');
   const emptyState = document.getElementById('moa-empty-state');
   const resetBtn = document.getElementById('moa-reset-btn');
-  const cards = container.querySelectorAll('.clause-card');
+  const rows = container.querySelectorAll('.clause-timeline-row');
   const triggerBtns = document.querySelectorAll('[data-trigger-filter]');
   const copyBtns = container.querySelectorAll('.clause-copy-btn');
 
+  // Single Continuous Progress Spine elements
+  const spineTrack = document.getElementById('moa-timeline-track');
+  const spineFill = document.getElementById('moa-timeline-fill');
+
+  // Sticky Progress HUD elements
+  const hudBadgeLabel = document.getElementById('moa-active-clause-label');
+  const hudTitle = document.getElementById('moa-active-clause-title');
+  const hudDomain = document.getElementById('moa-active-clause-domain');
+  const hudPercentage = document.getElementById('moa-progress-percentage');
+  const hudBarFill = document.getElementById('moa-progress-bar-fill');
+  const hudProgressBar = document.getElementById('moa-progress-bar-wrap');
+
   let currentCategory = 'all';
   let currentQuery = '';
+  let ticking = false;
+
+  // Single Continuous Line Geometry & Scroll Tracking (Clause 1 to Clause 30)
+  const updateSingleTimeline = () => {
+    const visibleRows = Array.from(rows).filter((r) => r.style.display !== 'none');
+    if (visibleRows.length === 0) {
+      if (spineTrack) spineTrack.style.display = 'none';
+      if (spineFill) spineFill.style.display = 'none';
+      return;
+    }
+
+    if (spineTrack) spineTrack.style.display = 'block';
+    if (spineFill) spineFill.style.display = 'block';
+
+    const firstRow = visibleRows[0];
+    const lastRow = visibleRows[visibleRows.length - 1];
+    const firstDot = firstRow.querySelector('.clause-timeline-row__dot');
+    const lastDot = lastRow.querySelector('.clause-timeline-row__dot');
+
+    if (!firstDot || !lastDot) return;
+
+    const containerRect = container.getBoundingClientRect();
+    const firstDotRect = firstDot.getBoundingClientRect();
+    const lastDotRect = lastDot.getBoundingClientRect();
+
+    // Align the single line precisely through the centers of the dots
+    const firstDotCenterY = firstDotRect.top + firstDotRect.height / 2;
+    const lastDotCenterY = lastDotRect.top + lastDotRect.height / 2;
+    const firstDotCenterX = firstDotRect.left + firstDotRect.width / 2;
+
+    const topOffset = firstDotCenterY - containerRect.top;
+    const bottomOffset = containerRect.bottom - lastDotCenterY;
+    const leftOffset = firstDotCenterX - containerRect.left;
+
+    if (spineTrack) {
+      spineTrack.style.top = `${topOffset}px`;
+      spineTrack.style.bottom = `${bottomOffset}px`;
+      spineTrack.style.left = `${leftOffset - 2}px`;
+    }
+    if (spineFill) {
+      spineFill.style.top = `${topOffset}px`;
+      spineFill.style.bottom = `${bottomOffset}px`;
+      spineFill.style.left = `${leftOffset - 2}px`;
+    }
+
+    // Scroll-driven calculation for the single continuous fill line
+    const vh = window.innerHeight;
+    const readingFocusY = vh * 0.48; // Active reading line at ~48% viewport
+    const totalDistance = lastDotCenterY - firstDotCenterY;
+
+    let progress = 0;
+    if (totalDistance <= 0) {
+      progress = 1;
+    } else {
+      progress = (readingFocusY - firstDotCenterY) / totalDistance;
+      progress = Math.max(0, Math.min(1, progress));
+    }
+
+    // Scale the single continuous fill line downwards
+    if (spineFill) {
+      spineFill.style.transform = `scaleY(${progress})`;
+    }
+
+    // Current filled position in viewport coordinates
+    const currentFilledY = firstDotCenterY + (progress * totalDistance);
+
+    let activeRow = null;
+    let minDistanceToFocus = Infinity;
+
+    visibleRows.forEach((row) => {
+      const dot = row.querySelector('.clause-timeline-row__dot');
+      if (!dot) return;
+      const dotY = dot.getBoundingClientRect().top + dot.getBoundingClientRect().height / 2;
+
+      // Mark completed if the single continuous fill line has reached this dot
+      if (dotY <= currentFilledY + 12) {
+        row.classList.add('is-completed');
+      } else {
+        row.classList.remove('is-completed');
+      }
+
+      // Track active row closest to the reading focus line
+      const dist = Math.abs(dotY - readingFocusY);
+      if (dist < minDistanceToFocus) {
+        minDistanceToFocus = dist;
+        activeRow = row;
+      }
+    });
+
+    // Mark the current active row
+    visibleRows.forEach((row) => {
+      if (row === activeRow) {
+        row.classList.add('is-active');
+      } else {
+        row.classList.remove('is-active');
+      }
+    });
+
+    if (!activeRow && visibleRows.length > 0) {
+      activeRow = visibleRows[0];
+      activeRow.classList.add('is-active');
+    }
+
+    // Update Sticky Progress HUD
+    if (activeRow && hudBadgeLabel && hudTitle) {
+      const clauseNum = activeRow.getAttribute('data-clause') || '1';
+      const formattedNum = String(clauseNum).padStart(2, '0');
+      const titleEl = activeRow.querySelector('.clause-title');
+      const domainEl = activeRow.querySelector('.clause-domain-tag');
+      const totalCount = rows.length;
+
+      hudBadgeLabel.textContent = `Clause ${formattedNum} of ${totalCount}`;
+      if (titleEl) {
+        hudTitle.textContent = titleEl.textContent;
+      }
+      if (domainEl && hudDomain) {
+        hudDomain.textContent = domainEl.textContent;
+      }
+
+      const activeIdx = visibleRows.indexOf(activeRow) + 1;
+      const pct = Math.min(100, Math.max(3, Math.round((activeIdx / visibleRows.length) * 100)));
+
+      if (hudPercentage) {
+        hudPercentage.textContent = `${pct}% Read`;
+      }
+      if (hudBarFill) {
+        hudBarFill.style.width = `${pct}%`;
+      }
+      if (hudProgressBar) {
+        hudProgressBar.setAttribute('aria-valuenow', pct);
+      }
+    }
+
+    ticking = false;
+  };
+
+  const onScroll = () => {
+    if (!ticking) {
+      requestAnimationFrame(updateSingleTimeline);
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
 
   const applyFilters = () => {
     let visibleCount = 0;
 
-    cards.forEach((card) => {
-      const category = card.getAttribute('data-category');
-      const text = card.textContent.toLowerCase();
+    rows.forEach((row) => {
+      const category = row.getAttribute('data-category');
+      const text = row.textContent.toLowerCase();
       const matchesCategory = currentCategory === 'all' || category === currentCategory;
       const matchesQuery = !currentQuery || text.includes(currentQuery);
 
+      const card = row.querySelector('.clause-card');
+
       if (matchesCategory && matchesQuery) {
-        card.style.display = '';
+        row.style.display = '';
         visibleCount++;
-        if (currentQuery) {
-          card.classList.add('clause-card--highlight');
-        } else {
-          card.classList.remove('clause-card--highlight');
+        if (card) {
+          if (currentQuery) {
+            card.classList.add('clause-card--highlight');
+          } else {
+            card.classList.remove('clause-card--highlight');
+          }
         }
       } else {
-        card.style.display = 'none';
-        card.classList.remove('clause-card--highlight');
+        row.style.display = 'none';
+        if (card) {
+          card.classList.remove('clause-card--highlight');
+        }
       }
     });
 
     // Update Counter
     if (counterBadge) {
-      counterBadge.textContent = `Showing ${visibleCount} of ${cards.length} Clauses`;
+      counterBadge.textContent = `Showing ${visibleCount} of ${rows.length} Clauses`;
     }
 
     // Toggle Empty State
@@ -213,9 +382,12 @@ function initObjectivesCharter() {
         container.style.display = 'none';
       } else {
         emptyState.style.display = 'none';
-        container.style.display = 'flex';
+        container.style.display = '';
       }
     }
+
+    // Recalculate single timeline line for visible items
+    updateSingleTimeline();
   };
 
   // Search Input Event
@@ -314,12 +486,12 @@ function initObjectivesCharter() {
   copyBtns.forEach((btn) => {
     btn.addEventListener('click', async () => {
       const targetId = btn.getAttribute('data-copy-target');
-      const card = document.getElementById(targetId);
-      if (!card) return;
+      const targetRow = document.getElementById(targetId);
+      if (!targetRow) return;
 
-      const titleEl = card.querySelector('.clause-title');
-      const bodyEl = card.querySelector('.clause-body');
-      const badgeEl = card.querySelector('.clause-badge');
+      const titleEl = targetRow.querySelector('.clause-title');
+      const bodyEl = targetRow.querySelector('.clause-body');
+      const badgeEl = targetRow.querySelector('.clause-badge');
 
       const citation = `MAHA HR FORUM — MoA ${badgeEl ? badgeEl.textContent : ''}: ${titleEl ? titleEl.textContent : ''}\n\n${bodyEl ? bodyEl.textContent.trim() : ''}\n\n(Section 8 Not-For-Profit Charter | www.mahahrforum.org)`;
 
@@ -337,6 +509,10 @@ function initObjectivesCharter() {
       }
     });
   });
+
+  // Initial calculation on page load and window load
+  updateSingleTimeline();
+  window.addEventListener('load', updateSingleTimeline);
 }
 
 /**

@@ -727,30 +727,322 @@
 }
 
 /* Clauses List Grid */
+/* ==========================================================================
+   MOA CHARTER STICKY PROGRESS HUD (Framer Progress Steps Tracker)
+   ========================================================================== */
+.moa-progress-hud {
+  position: sticky;
+  top: 72px;
+  z-index: 45;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 230, 236, 0.85);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px -2px rgba(9, 23, 42, 0.08);
+  margin-bottom: 2rem;
+  padding: 0.85rem 1.25rem;
+  transition: all var(--transition-base);
+}
+
+.moa-progress-hud__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.moa-progress-hud__left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.moa-progress-hud__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: var(--fw-extrabold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-amber-600);
+  background-color: var(--color-amber-100);
+  border: 1px solid rgba(216, 89, 10, 0.25);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-pill);
+  flex-shrink: 0;
+}
+
+.moa-progress-hud__pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-amber-500);
+  box-shadow: 0 0 0 0 rgba(216, 89, 10, 0.7);
+  animation: hudPulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@keyframes hudPulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(216, 89, 10, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 7px rgba(216, 89, 10, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(216, 89, 10, 0);
+  }
+}
+
+.moa-progress-hud__info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.moa-progress-hud__title {
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-navy-900);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.moa-progress-hud__subtitle {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.moa-progress-hud__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+  flex-shrink: 0;
+  min-width: 180px;
+}
+
+.moa-progress-hud__stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+}
+
+.moa-progress-hud__stats-label {
+  color: var(--color-text-muted);
+  font-weight: var(--fw-medium);
+}
+
+.moa-progress-hud__percentage {
+  color: var(--color-navy-900);
+  font-weight: var(--fw-bold);
+}
+
+.moa-progress-hud__bar {
+  width: 100%;
+  height: 6px;
+  background-color: rgba(14, 32, 56, 0.08);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.moa-progress-hud__bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-amber-500), var(--color-amber-400));
+  border-radius: var(--radius-pill);
+  transition: width 0.2s ease-out;
+}
+
+/* ==========================================================================
+   MOA CHARTER SINGLE CONTINUOUS TIMELINE (Clause 1 to Clause 30)
+   ========================================================================== */
+.moa-timeline-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* The Single Continuous Timeline Spine */
+.moa-single-timeline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.moa-single-timeline__track {
+  position: absolute;
+  width: 4px;
+  background-color: rgba(14, 32, 56, 0.08);
+  border-radius: var(--radius-pill);
+  transition: top 0.2s ease, bottom 0.2s ease, left 0.2s ease;
+}
+
+.moa-single-timeline__fill {
+  position: absolute;
+  width: 4px;
+  background: linear-gradient(180deg, var(--color-amber-400), var(--color-amber-600));
+  border-radius: var(--radius-pill);
+  transform-origin: top;
+  transform: scaleY(0);
+  box-shadow: 0 0 10px rgba(216, 89, 10, 0.45);
+  will-change: transform;
+  transition: transform 0.08s linear, top 0.2s ease, bottom 0.2s ease, left 0.2s ease;
+}
+
+/* Clauses List Grid */
 .moa-clauses-list {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
+/* Clause Timeline Row */
+.clause-timeline-row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 1.5rem;
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+/* Left Column: Step Numeral & Connector Dot (Aligned on the Single Line) */
+.clause-timeline-row__left {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 0 0 115px;
+  padding-top: 1.25rem;
+  user-select: none;
+}
+
+.clause-timeline-row__step-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 58px;
+  flex: 1;
+  text-align: right;
+}
+
+.clause-timeline-row__label {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: var(--fw-extrabold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-tertiary);
+  line-height: 1;
+  margin-bottom: 2px;
+  transition: color 0.3s ease;
+}
+
+.clause-timeline-row__num {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: var(--fw-extrabold);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #94A3B8;
+  transition: color 0.3s cubic-bezier(0.2, 0, 0, 1), transform 0.3s cubic-bezier(0.2, 0, 0, 1);
+  will-change: transform, color;
+}
+
+.clause-timeline-row__dot-wrap {
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6px;
+  z-index: 3;
+}
+
+.clause-timeline-row__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--color-surface-pure);
+  border: 3px solid #CBD5E1;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  box-shadow: 0 0 0 2px #FFFFFF;
+}
+
+/* Active & Completed Row States */
+.clause-timeline-row.is-active .clause-timeline-row__label {
+  color: var(--color-amber-600);
+}
+
+.clause-timeline-row.is-active .clause-timeline-row__num {
+  color: var(--color-amber-500);
+  transform: scale(1.06);
+}
+
+.clause-timeline-row.is-active .clause-timeline-row__dot {
+  border-color: var(--color-amber-500);
+  background-color: var(--color-amber-500);
+  box-shadow: 0 0 0 5px rgba(216, 89, 10, 0.25), 0 0 0 2px #FFFFFF;
+  transform: scale(1.15);
+}
+
+.clause-timeline-row.is-active .clause-card {
+  border-color: rgba(216, 89, 10, 0.45);
+  box-shadow: 0 12px 32px -4px rgba(216, 89, 10, 0.12), 0 4px 12px rgba(11, 23, 42, 0.06);
+  background-color: #FFFFFF;
+}
+
+.clause-timeline-row.is-completed .clause-timeline-row__num {
+  color: var(--color-navy-800);
+}
+
+.clause-timeline-row.is-completed .clause-timeline-row__dot {
+  border-color: var(--color-amber-600);
+  background-color: var(--color-amber-600);
+}
+
+/* Clause Content Card Box */
 .clause-card {
+  flex: 1;
+  min-width: 0;
   background-color: var(--color-surface-pure);
   border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-md);
-  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  border-radius: 18px;
+  padding: clamp(1.25rem, 2vw, 1.75rem);
   box-shadow: var(--shadow-subtle);
-  transition: all var(--transition-base);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base), background-color var(--transition-base);
   position: relative;
+  overflow: hidden;
 }
 
 .clause-card:hover {
   border-color: var(--color-border-medium);
   box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
 }
 
 .clause-card--highlight {
-  border-color: var(--color-amber-400);
-  background-color: #FFFCF9;
+  border-color: var(--color-amber-400) !important;
+  background-color: #FFFCF9 !important;
 }
 
 .clause-card__header {
@@ -786,7 +1078,7 @@
 
 .clause-title {
   font-family: var(--font-heading);
-  font-size: 1.125rem;
+  font-size: 1.15rem;
   font-weight: var(--fw-bold);
   color: var(--color-navy-900);
   margin-bottom: 0;
@@ -1100,6 +1392,90 @@
   .moa-counter-badge {
     text-align: center;
   }
+
+  .moa-progress-hud {
+    top: 64px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .moa-progress-hud__container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+  }
+
+  .moa-progress-hud__right {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .clause-card {
+    padding: 1.25rem 1rem;
+    border-radius: 14px;
+  }
+
+  .clause-timeline-row {
+    gap: 0.85rem;
+  }
+
+  .clause-timeline-row__left {
+    flex: 0 0 72px;
+    gap: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  .clause-timeline-row__step-box {
+    min-width: 38px;
+  }
+
+  .clause-timeline-row__num {
+    font-size: 1.65rem;
+  }
+
+  .clause-timeline-row__label {
+    font-size: 0.55rem;
+  }
+
+  .clause-timeline-row__dot-wrap {
+    width: 20px;
+    padding-top: 5px;
+  }
+
+  .clause-timeline-row__dot {
+    width: 12px;
+    height: 12px;
+    border-width: 2.5px;
+  }
+}
+
+@media (max-width: 540px) {
+  .clause-timeline-row__left {
+    flex: 0 0 56px;
+    gap: 0.35rem;
+  }
+
+  .clause-timeline-row__step-box {
+    min-width: 30px;
+  }
+
+  .clause-timeline-row__num {
+    font-size: 1.35rem;
+  }
+
+  .clause-timeline-row__label {
+    font-size: 0.5rem;
+  }
+
+  .clause-timeline-row__dot-wrap {
+    width: 16px;
+  }
+
+  .clause-timeline-row__dot {
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1122,3 +1498,4 @@
     margin-top: 0.35rem;
   }
 }
+

@@ -601,609 +601,1063 @@
           </div>
         </div>
 
-        <!-- 30 Verbatim MoA Clauses List -->
-        <div class="moa-clauses-list" id="moa-clauses-container">
+        <!-- Sticky Charter Progress Tracker (Framer Progress Steps) -->
+        <div class="moa-progress-hud" id="moa-progress-hud" role="region" aria-label="MoA Reading Progress Tracker">
+          <div class="moa-progress-hud__container">
+            <div class="moa-progress-hud__left">
+              <div class="moa-progress-hud__badge" id="moa-hud-badge">
+                <span class="moa-progress-hud__pulse"></span>
+                <span id="moa-active-clause-label">Clause 01 of 30</span>
+              </div>
+              <div class="moa-progress-hud__info">
+                <span class="moa-progress-hud__title" id="moa-active-clause-title">HR Education &amp; Training</span>
+                <span class="moa-progress-hud__subtitle" id="moa-active-clause-domain">Domain: Education</span>
+              </div>
+            </div>
+            <div class="moa-progress-hud__right">
+              <div class="moa-progress-hud__stats">
+                <span class="moa-progress-hud__stats-label">Charter Progress</span>
+                <span class="moa-progress-hud__percentage" id="moa-progress-percentage">3% Read</span>
+              </div>
+              <div class="moa-progress-hud__bar" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" id="moa-progress-bar-wrap">
+                <div class="moa-progress-hud__bar-fill" id="moa-progress-bar-fill" style="width: 3.33%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 30 Verbatim MoA Clauses List (Single Continuous Timeline) -->
+        <div class="moa-timeline-wrapper" id="moa-clauses-container">
+
+          <!-- Single Continuous Progress Spine Line (Clause 1 to Clause 30) -->
+          <div class="moa-single-timeline" id="moa-single-timeline" aria-hidden="true">
+            <div class="moa-single-timeline__track" id="moa-timeline-track"></div>
+            <div class="moa-single-timeline__fill" id="moa-timeline-fill"></div>
+          </div>
+
+          <div class="moa-clauses-list" id="moa-clauses-list">
 
           <!-- Clause 1 -->
-          <article class="clause-card" data-category="education" data-clause="1" id="clause-1">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 01</span>
-                <h3 class="clause-title">HR Education &amp; Training</h3>
+          <div class="clause-timeline-row" data-category="education" data-clause="1" id="clause-1">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">01</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Education</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-1" aria-label="Copy Clause 1 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To promote, advance, and develop education, research, training, and professional practice in Human Resource Management, Industrial Relations, Employee Relations, People Management, Talent Management, Payroll Administration, Labour Welfare, Employment Laws, Statutory Compliance, Organizational Development, Performance Management, Compensation &amp; Benefits, Learning &amp; Development, Human Capital Management, and all allied HR functions applicable to factories, commercial establishments, institutions, and organizations.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 01</span>
+                                              <h3 class="clause-title">HR Education &amp; Training</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Education</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-1" aria-label="Copy Clause 1 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To promote, advance, and develop education, research, training, and professional practice in Human Resource Management, Industrial Relations, Employee Relations, People Management, Talent Management, Payroll Administration, Labour Welfare, Employment Laws, Statutory Compliance, Organizational Development, Performance Management, Compensation &amp; Benefits, Learning &amp; Development, Human Capital Management, and all allied HR functions applicable to factories, commercial establishments, institutions, and organizations.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 2 -->
-          <article class="clause-card" data-category="education" data-clause="2" id="clause-2">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 02</span>
-                <h3 class="clause-title">Conclaves &amp; Capacity Building</h3>
+          <div class="clause-timeline-row" data-category="education" data-clause="2" id="clause-2">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">02</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Education</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-2" aria-label="Copy Clause 2 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To organize, conduct, establish, and implement training programmes, workshops, seminars, conferences, webinars, conclaves, certification programmes, faculty development programmes, and capacity-building initiatives relating to Human Resource Management, Industrial Relations, Labour Laws, Payroll Administration, Occupational Health &amp; Safety, POSH, Social Security, Apprenticeship, Labour Codes, workplace governance, ESG, future of work, and emerging HR practices.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 02</span>
+                                              <h3 class="clause-title">Conclaves &amp; Capacity Building</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Education</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-2" aria-label="Copy Clause 2 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To organize, conduct, establish, and implement training programmes, workshops, seminars, conferences, webinars, conclaves, certification programmes, faculty development programmes, and capacity-building initiatives relating to Human Resource Management, Industrial Relations, Labour Laws, Payroll Administration, Occupational Health &amp; Safety, POSH, Social Security, Apprenticeship, Labour Codes, workplace governance, ESG, future of work, and emerging HR practices.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 3 -->
-          <article class="clause-card" data-category="education" data-clause="3" id="clause-3">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 03</span>
-                <h3 class="clause-title">Institutes &amp; Learning Centres</h3>
+          <div class="clause-timeline-row" data-category="education" data-clause="3" id="clause-3">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">03</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Education</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-3" aria-label="Copy Clause 3 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To establish, manage, and operate training institutes, academies, learning centres, HR forums, research centres, knowledge centres, libraries, digital learning platforms, HR incubation centres, centres of excellence, and professional development institutions for education, certification, compliance training, skill development, lifelong learning, and HR innovation.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 03</span>
+                                              <h3 class="clause-title">Institutes &amp; Learning Centres</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Education</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-3" aria-label="Copy Clause 3 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To establish, manage, and operate training institutes, academies, learning centres, HR forums, research centres, knowledge centres, libraries, digital learning platforms, HR incubation centres, centres of excellence, and professional development institutions for education, certification, compliance training, skill development, lifelong learning, and HR innovation.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 4 -->
-          <article class="clause-card" data-category="compliance" data-clause="4" id="clause-4">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 04</span>
-                <h3 class="clause-title">Applied Statutory Compliance</h3>
+          <div class="clause-timeline-row" data-category="compliance" data-clause="4" id="clause-4">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">04</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Compliance</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-4" aria-label="Copy Clause 4 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To provide practical and applied training relating to compliance with labour legislations including the Code on Wages, Industrial Relations Code, Code on Social Security, Occupational Safety, Health and Working Conditions Code, Payment of Bonus, Payment of Gratuity, Employees' Provident Fund, Employees' State Insurance, Labour Welfare Fund, Factories, Shops and Establishments, Contract Labour, Building and Other Construction Workers, Equal Remuneration, Maternity Benefit, Apprenticeship, Gig and Platform Workers, and other employment-related laws.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 04</span>
+                                              <h3 class="clause-title">Applied Statutory Compliance</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Compliance</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-4" aria-label="Copy Clause 4 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To provide practical and applied training relating to compliance with labour legislations including the Code on Wages, Industrial Relations Code, Code on Social Security, Occupational Safety, Health and Working Conditions Code, Payment of Bonus, Payment of Gratuity, Employees' Provident Fund, Employees' State Insurance, Labour Welfare Fund, Factories, Shops and Establishments, Contract Labour, Building and Other Construction Workers, Equal Remuneration, Maternity Benefit, Apprenticeship, Gig and Platform Workers, and other employment-related laws.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 5 -->
-          <article class="clause-card" data-category="education" data-clause="5" id="clause-5">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 05</span>
-                <h3 class="clause-title">Research &amp; Benchmarking</h3>
+          <div class="clause-timeline-row" data-category="education" data-clause="5" id="clause-5">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">05</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Education</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-5" aria-label="Copy Clause 5 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To promote research, innovation, policy development, benchmarking studies, surveys, publications, case studies, and professional excellence in Human Resource Management, Industrial Relations, labour markets, workplace governance, employment practices, employee welfare, productivity, industrial harmony, sustainability, and organizational excellence.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 05</span>
+                                              <h3 class="clause-title">Research &amp; Benchmarking</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Education</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-5" aria-label="Copy Clause 5 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To promote research, innovation, policy development, benchmarking studies, surveys, publications, case studies, and professional excellence in Human Resource Management, Industrial Relations, labour markets, workplace governance, employment practices, employee welfare, productivity, industrial harmony, sustainability, and organizational excellence.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 6 -->
-          <article class="clause-card" data-category="digital" data-clause="6" id="clause-6">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 06</span>
-                <h3 class="clause-title">Digital HR &amp; AI Transformation</h3>
+          <div class="clause-timeline-row" data-category="digital" data-clause="6" id="clause-6">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">06</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Digital &amp; AI</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-6" aria-label="Copy Clause 6 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To promote Digital HR, HR Analytics, Artificial Intelligence (AI), Machine Learning, Human Resource Information Systems (HRIS), People Analytics, automation, robotics process automation (RPA), cloud HR platforms, cyber security relating to HR data, blockchain applications, digital workplace transformation, responsible AI, AI governance, and emerging technologies for the advancement of modern Human Resource Management and Industrial Relations.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 06</span>
+                                              <h3 class="clause-title">Digital HR &amp; AI Transformation</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Digital &amp; AI</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-6" aria-label="Copy Clause 6 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To promote Digital HR, HR Analytics, Artificial Intelligence (AI), Machine Learning, Human Resource Information Systems (HRIS), People Analytics, automation, robotics process automation (RPA), cloud HR platforms, cyber security relating to HR data, blockchain applications, digital workplace transformation, responsible AI, AI governance, and emerging technologies for the advancement of modern Human Resource Management and Industrial Relations.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 7 -->
-          <article class="clause-card" data-category="youth" data-clause="7" id="clause-7">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 07</span>
-                <h3 class="clause-title">Academic &amp; Institutional Partnerships</h3>
+          <div class="clause-timeline-row" data-category="youth" data-clause="7" id="clause-7">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">07</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Youth &amp; Academia</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-7" aria-label="Copy Clause 7 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To collaborate and partner with schools, colleges, universities, management institutes, law colleges, research institutions, Government departments, statutory authorities, skill development organizations, industry bodies, professional associations, national and international organizations for education, research, curriculum development, faculty development, internships, exchange programmes, and knowledge sharing.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 07</span>
+                                              <h3 class="clause-title">Academic &amp; Institutional Partnerships</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Youth &amp; Academia</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-7" aria-label="Copy Clause 7 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To collaborate and partner with schools, colleges, universities, management institutes, law colleges, research institutions, Government departments, statutory authorities, skill development organizations, industry bodies, professional associations, national and international organizations for education, research, curriculum development, faculty development, internships, exchange programmes, and knowledge sharing.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 8 -->
-          <article class="clause-card" data-category="youth" data-clause="8" id="clause-8">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 08</span>
-                <h3 class="clause-title">Student Support &amp; Mentorship</h3>
+          <div class="clause-timeline-row" data-category="youth" data-clause="8" id="clause-8">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">08</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Youth &amp; Academia</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-8" aria-label="Copy Clause 8 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To support students and young professionals pursuing education in Human Resources, Industrial Relations, Labour Law, Management, Law, Psychology, Commerce, Economics, Finance, Social Work, and allied disciplines through internships, mentoring, career counselling, scholarships, industrial visits, live projects, placement support, apprenticeships, and professional guidance.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 08</span>
+                                              <h3 class="clause-title">Student Support &amp; Mentorship</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Youth &amp; Academia</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-8" aria-label="Copy Clause 8 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To support students and young professionals pursuing education in Human Resources, Industrial Relations, Labour Law, Management, Law, Psychology, Commerce, Economics, Finance, Social Work, and allied disciplines through internships, mentoring, career counselling, scholarships, industrial visits, live projects, placement support, apprenticeships, and professional guidance.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 9 -->
-          <article class="clause-card" data-category="education" data-clause="9" id="clause-9">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 09</span>
-                <h3 class="clause-title">Continuous Professional Development (CPD)</h3>
+          <div class="clause-timeline-row" data-category="education" data-clause="9" id="clause-9">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">09</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Education</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-9" aria-label="Copy Clause 9 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To promote continuous professional development by creating opportunities for networking, mentoring, knowledge sharing, leadership development, professional ethics, certification, fellowships, competency development, and lifelong learning among HR professionals, IR practitioners, payroll professionals, labour law consultants, compliance officers, trainers, academicians, researchers, entrepreneurs, and self-employed professionals.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 09</span>
+                                              <h3 class="clause-title">Continuous Professional Development (CPD)</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Education</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-9" aria-label="Copy Clause 9 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To promote continuous professional development by creating opportunities for networking, mentoring, knowledge sharing, leadership development, professional ethics, certification, fellowships, competency development, and lifelong learning among HR professionals, IR practitioners, payroll professionals, labour law consultants, compliance officers, trainers, academicians, researchers, entrepreneurs, and self-employed professionals.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 10 -->
-          <article class="clause-card" data-category="digital" data-clause="10" id="clause-10">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 10</span>
-                <h3 class="clause-title">Entrepreneurship &amp; Consulting Incubation</h3>
+          <div class="clause-timeline-row" data-category="digital" data-clause="10" id="clause-10">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">10</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Innovation</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-10" aria-label="Copy Clause 10 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To promote entrepreneurship and professional practice in Human Resource Management, Industrial Relations, Labour Law, Payroll Administration, Compliance Management, HR Technology, Training, Consulting, Recruitment, Staffing, Outsourcing, and allied professional services through incubation, mentoring, guidance, and professional networking.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 10</span>
+                                              <h3 class="clause-title">Entrepreneurship &amp; Consulting Incubation</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Innovation</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-10" aria-label="Copy Clause 10 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To promote entrepreneurship and professional practice in Human Resource Management, Industrial Relations, Labour Law, Payroll Administration, Compliance Management, HR Technology, Training, Consulting, Recruitment, Staffing, Outsourcing, and allied professional services through incubation, mentoring, guidance, and professional networking.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 11 -->
-          <article class="clause-card" data-category="industry" data-clause="11" id="clause-11">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 11</span>
-                <h3 class="clause-title">Industrial &amp; MIDC Enterprise Engagement</h3>
+          <div class="clause-timeline-row" data-category="industry" data-clause="11" id="clause-11">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">11</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: MIDC &amp; Industry</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-11" aria-label="Copy Clause 11 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To engage and collaborate with factories, industrial establishments, MSMEs, manufacturing units, MIDC industries, IT and ITES companies, service sector organizations, educational institutions, healthcare organizations, hospitality establishments, commercial establishments, startups, cooperatives, construction establishments, logistics organizations, and all employer organizations for HR excellence, workforce development, productivity improvement, and statutory compliance.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 11</span>
+                                              <h3 class="clause-title">Industrial &amp; MIDC Enterprise Engagement</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: MIDC &amp; Industry</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-11" aria-label="Copy Clause 11 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To engage and collaborate with factories, industrial establishments, MSMEs, manufacturing units, MIDC industries, IT and ITES companies, service sector organizations, educational institutions, healthcare organizations, hospitality establishments, commercial establishments, startups, cooperatives, construction establishments, logistics organizations, and all employer organizations for HR excellence, workforce development, productivity improvement, and statutory compliance.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 12 -->
-          <article class="clause-card" data-category="industry" data-clause="12" id="clause-12">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 12</span>
-                <h3 class="clause-title">Tripartite Dialogue &amp; Cooperation</h3>
+          <div class="clause-timeline-row" data-category="industry" data-clause="12" id="clause-12">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">12</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: MIDC &amp; Industry</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-12" aria-label="Copy Clause 12 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To associate and cooperate with employer associations, chambers of commerce, trade bodies, labour unions, worker organizations, cooperative institutions, NGOs, trusts, civil society organizations, alumni associations, professional bodies, employer federations, and industry associations to promote lawful employment practices, industrial harmony, workplace cooperation, and social dialogue.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 12</span>
+                                              <h3 class="clause-title">Tripartite Dialogue &amp; Cooperation</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: MIDC &amp; Industry</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-12" aria-label="Copy Clause 12 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To associate and cooperate with employer associations, chambers of commerce, trade bodies, labour unions, worker organizations, cooperative institutions, NGOs, trusts, civil society organizations, alumni associations, professional bodies, employer federations, and industry associations to promote lawful employment practices, industrial harmony, workplace cooperation, and social dialogue.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 13 -->
-          <article class="clause-card" data-category="harmony" data-clause="13" id="clause-13">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 13</span>
-                <h3 class="clause-title">Legal Literacy &amp; Advisory Services</h3>
+          <div class="clause-timeline-row" data-category="harmony" data-clause="13" id="clause-13">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">13</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: IR &amp; Legal</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-13" aria-label="Copy Clause 13 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To provide awareness, guidance, counselling, advisory, mentoring, legal awareness, policy advocacy, representation, support services, grievance guidance, and assistance to employers, employees, workers, students, entrepreneurs, and citizens relating to labour laws, employment rights, statutory benefits, workplace practices, grievance redressal mechanisms, career development, HR processes, and progressive labour policies, without engaging in political activities.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 13</span>
+                                              <h3 class="clause-title">Legal Literacy &amp; Advisory Services</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: IR &amp; Legal</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-13" aria-label="Copy Clause 13 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To provide awareness, guidance, counselling, advisory, mentoring, legal awareness, policy advocacy, representation, support services, grievance guidance, and assistance to employers, employees, workers, students, entrepreneurs, and citizens relating to labour laws, employment rights, statutory benefits, workplace practices, grievance redressal mechanisms, career development, HR processes, and progressive labour policies, without engaging in political activities.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 14 -->
-          <article class="clause-card" data-category="harmony" data-clause="14" id="clause-14">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 14</span>
-                <h3 class="clause-title">Mediation &amp; Industrial Peace</h3>
+          <div class="clause-timeline-row" data-category="harmony" data-clause="14" id="clause-14">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">14</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: IR &amp; Peace</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-14" aria-label="Copy Clause 14 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To encourage mediation, conciliation, dialogue, dispute prevention, and peaceful dispute resolution for promoting harmonious employer-employee relations, industrial peace, ethical employment practices, lawful workplace governance, and sustainable industrial relations.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 14</span>
+                                              <h3 class="clause-title">Mediation &amp; Industrial Peace</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: IR &amp; Peace</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-14" aria-label="Copy Clause 14 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To encourage mediation, conciliation, dialogue, dispute prevention, and peaceful dispute resolution for promoting harmonious employer-employee relations, industrial peace, ethical employment practices, lawful workplace governance, and sustainable industrial relations.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 15 -->
-          <article class="clause-card" data-category="youth" data-clause="15" id="clause-15">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 15</span>
-                <h3 class="clause-title">Employment Promotion &amp; Job Fairs</h3>
+          <div class="clause-timeline-row" data-category="youth" data-clause="15" id="clause-15">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">15</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Youth &amp; Jobs</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-15" aria-label="Copy Clause 15 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To organize employment promotion initiatives including job fairs, apprenticeship fairs, placement drives, campus recruitment programmes, career guidance programmes, employability enhancement initiatives, startup connect programmes, and employer-employee interaction forums.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 15</span>
+                                              <h3 class="clause-title">Employment Promotion &amp; Job Fairs</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Youth &amp; Jobs</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-15" aria-label="Copy Clause 15 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To organize employment promotion initiatives including job fairs, apprenticeship fairs, placement drives, campus recruitment programmes, career guidance programmes, employability enhancement initiatives, startup connect programmes, and employer-employee interaction forums.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 16 -->
-          <article class="clause-card" data-category="compliance" data-clause="16" id="clause-16">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 16</span>
-                <h3 class="clause-title">Publications &amp; Dissemination</h3>
+          <div class="clause-timeline-row" data-category="compliance" data-clause="16" id="clause-16">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">16</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Knowledge</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-16" aria-label="Copy Clause 16 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To publish, print, develop, translate, and disseminate journals, newsletters, magazines, books, manuals, compliance handbooks, research papers, reports, case studies, digital publications, podcasts, videos, online courses, and educational content in print and electronic media relating to Human Resource Management, Labour Laws, Industrial Relations, workplace governance, and professional development.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 16</span>
+                                              <h3 class="clause-title">Publications &amp; Dissemination</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Knowledge</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-16" aria-label="Copy Clause 16 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To publish, print, develop, translate, and disseminate journals, newsletters, magazines, books, manuals, compliance handbooks, research papers, reports, case studies, digital publications, podcasts, videos, online courses, and educational content in print and electronic media relating to Human Resource Management, Labour Laws, Industrial Relations, workplace governance, and professional development.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 17 -->
-          <article class="clause-card" data-category="governance" data-clause="17" id="clause-17">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 17</span>
-                <h3 class="clause-title">Public Awareness &amp; Outreach</h3>
+          <div class="clause-timeline-row" data-category="governance" data-clause="17" id="clause-17">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">17</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Governance</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-17" aria-label="Copy Clause 17 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To create awareness among employers, employees, students, and the public through social media, websites, digital platforms, awareness campaigns, posters, exhibitions, publications, outreach programmes, public education initiatives, and digital communication relating to Human Resources, labour welfare, employment laws, workplace ethics, occupational safety, and social security.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 17</span>
+                                              <h3 class="clause-title">Public Awareness &amp; Outreach</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Governance</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-17" aria-label="Copy Clause 17 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To create awareness among employers, employees, students, and the public through social media, websites, digital platforms, awareness campaigns, posters, exhibitions, publications, outreach programmes, public education initiatives, and digital communication relating to Human Resources, labour welfare, employment laws, workplace ethics, occupational safety, and social security.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 18 -->
-          <article class="clause-card" data-category="industry" data-clause="18" id="clause-18">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 18</span>
-                <h3 class="clause-title">Government &amp; Skill Mission Linkages</h3>
+          <div class="clause-timeline-row" data-category="industry" data-clause="18" id="clause-18">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">18</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: MIDC &amp; Industry</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-18" aria-label="Copy Clause 18 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To collaborate with the Central Government, State Governments, Labour &amp; Employment Departments, Skill India Mission, NSDC, State Skill Missions, Sector Skill Councils, Public Sector Undertakings, local authorities, CSR foundations, banks, financial institutions, and international organizations for HR development, labour welfare, education, employment, entrepreneurship, and skill development programmes.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 18</span>
+                                              <h3 class="clause-title">Government &amp; Skill Mission Linkages</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: MIDC &amp; Industry</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-18" aria-label="Copy Clause 18 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To collaborate with the Central Government, State Governments, Labour &amp; Employment Departments, Skill India Mission, NSDC, State Skill Missions, Sector Skill Councils, Public Sector Undertakings, local authorities, CSR foundations, banks, financial institutions, and international organizations for HR development, labour welfare, education, employment, entrepreneurship, and skill development programmes.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 19 -->
-          <article class="clause-card" data-category="governance" data-clause="19" id="clause-19">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 19</span>
-                <h3 class="clause-title">Grants, Subscriptions &amp; Fund Utilization</h3>
+          <div class="clause-timeline-row" data-category="governance" data-clause="19" id="clause-19">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">19</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Governance</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-19" aria-label="Copy Clause 19 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To receive grants, donations, subscriptions, sponsorships, CSR contributions, endowments, gifts, and lawful financial assistance from Governments, institutions, companies, foundations, individuals, and other lawful sources and to utilize such funds solely for promoting the objects of the Company in accordance with Section 8 of the Companies Act, 2013, without distribution of any profits or dividends to its members.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 19</span>
+                                              <h3 class="clause-title">Grants, Subscriptions &amp; Fund Utilization</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Governance</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-19" aria-label="Copy Clause 19 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To receive grants, donations, subscriptions, sponsorships, CSR contributions, endowments, gifts, and lawful financial assistance from Governments, institutions, companies, foundations, individuals, and other lawful sources and to utilize such funds solely for promoting the objects of the Company in accordance with Section 8 of the Companies Act, 2013, without distribution of any profits or dividends to its members.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 20 -->
-          <article class="clause-card" data-category="governance" data-clause="20" id="clause-20">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 20</span>
-                <h3 class="clause-title">Recognition &amp; Awards</h3>
+          <div class="clause-timeline-row" data-category="governance" data-clause="20" id="clause-20">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">20</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Governance</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-20" aria-label="Copy Clause 20 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To institute awards, fellowships, scholarships, recognitions, certifications, honours, rankings, and appreciation programmes for individuals, professionals, students, institutions, factories, establishments, researchers, organizations, and HR leaders demonstrating excellence in Human Resource Management, Industrial Relations, compliance, innovation, leadership, workplace safety, labour welfare, sustainability, and organizational development.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 20</span>
+                                              <h3 class="clause-title">Recognition &amp; Awards</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Governance</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-20" aria-label="Copy Clause 20 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To institute awards, fellowships, scholarships, recognitions, certifications, honours, rankings, and appreciation programmes for individuals, professionals, students, institutions, factories, establishments, researchers, organizations, and HR leaders demonstrating excellence in Human Resource Management, Industrial Relations, compliance, innovation, leadership, workplace safety, labour welfare, sustainability, and organizational development.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 21 -->
-          <article class="clause-card" data-category="youth" data-clause="21" id="clause-21">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 21</span>
-                <h3 class="clause-title">Employability &amp; Livelihood Enhancement</h3>
+          <div class="clause-timeline-row" data-category="youth" data-clause="21" id="clause-21">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">21</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Youth &amp; Jobs</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-21" aria-label="Copy Clause 21 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To promote employability, livelihood enhancement, workforce participation, entrepreneurship, career development, placement assistance, counselling, workforce capacity building, and skill development on a not-for-profit basis, including facilitation of access to Government welfare and social security schemes.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 21</span>
+                                              <h3 class="clause-title">Employability &amp; Livelihood Enhancement</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Youth &amp; Jobs</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-21" aria-label="Copy Clause 21 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To promote employability, livelihood enhancement, workforce participation, entrepreneurship, career development, placement assistance, counselling, workforce capacity building, and skill development on a not-for-profit basis, including facilitation of access to Government welfare and social security schemes.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 22 -->
-          <article class="clause-card" data-category="welfare" data-clause="22" id="clause-22">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 22</span>
-                <h3 class="clause-title">Inclusion, Diversity &amp; Vulnerable Groups</h3>
+          <div class="clause-timeline-row" data-category="welfare" data-clause="22" id="clause-22">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">22</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Welfare &amp; Inclusion</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-22" aria-label="Copy Clause 22 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To empower women, youth, persons with disabilities, migrant workers, economically weaker sections, senior citizens, transgender persons, and other vulnerable groups through education, leadership development, workplace inclusion, diversity, equity and inclusion (DEI), equal opportunity, POSH awareness, maternity protection, employability enhancement, and employment support.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 22</span>
+                                              <h3 class="clause-title">Inclusion, Diversity &amp; Vulnerable Groups</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Welfare &amp; Inclusion</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-22" aria-label="Copy Clause 22 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To empower women, youth, persons with disabilities, migrant workers, economically weaker sections, senior citizens, transgender persons, and other vulnerable groups through education, leadership development, workplace inclusion, diversity, equity and inclusion (DEI), equal opportunity, POSH awareness, maternity protection, employability enhancement, and employment support.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 23 -->
-          <article class="clause-card" data-category="welfare" data-clause="23" id="clause-23">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 23</span>
-                <h3 class="clause-title">Occupational Safety, Health &amp; Green HR</h3>
+          <div class="clause-timeline-row" data-category="welfare" data-clause="23" id="clause-23">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">23</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Welfare &amp; Safety</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-23" aria-label="Copy Clause 23 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To promote occupational health, safety, hygiene, sanitation, environmental sustainability, Green HR, dignity of labour, employee well-being, mental health awareness, workplace wellness, gender-sensitive workplaces, and safe working environments through education, awareness, audits, research, and compliance guidance.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 23</span>
+                                              <h3 class="clause-title">Occupational Safety, Health &amp; Green HR</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Welfare &amp; Safety</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-23" aria-label="Copy Clause 23 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To promote occupational health, safety, hygiene, sanitation, environmental sustainability, Green HR, dignity of labour, employee well-being, mental health awareness, workplace wellness, gender-sensitive workplaces, and safe working environments through education, awareness, audits, research, and compliance guidance.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 24 -->
-          <article class="clause-card" data-category="welfare" data-clause="24" id="clause-24">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 24</span>
-                <h3 class="clause-title">Elimination of Unlawful Practices</h3>
+          <div class="clause-timeline-row" data-category="welfare" data-clause="24" id="clause-24">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">24</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Welfare &amp; Ethics</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-24" aria-label="Copy Clause 24 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To work towards the prevention and elimination of child labour, bonded labour, forced labour, workplace discrimination, workplace harassment, unsafe employment practices, and all forms of unlawful employment through awareness, education, advocacy, collaboration with competent authorities, promotion of ethical employment practices, and compliance with international labour standards.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 24</span>
+                                              <h3 class="clause-title">Elimination of Unlawful Practices</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Welfare &amp; Ethics</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-24" aria-label="Copy Clause 24 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To work towards the prevention and elimination of child labour, bonded labour, forced labour, workplace discrimination, workplace harassment, unsafe employment practices, and all forms of unlawful employment through awareness, education, advocacy, collaboration with competent authorities, promotion of ethical employment practices, and compliance with international labour standards.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 25 -->
-          <article class="clause-card" data-category="welfare" data-clause="25" id="clause-25">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 25</span>
-                <h3 class="clause-title">Worker Relief &amp; Emergency Assistance</h3>
+          <div class="clause-timeline-row" data-category="welfare" data-clause="25" id="clause-25">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">25</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Welfare &amp; Relief</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-25" aria-label="Copy Clause 25 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To provide relief, counselling, rehabilitation support, and guidance to workers, employees, students, and their families affected by industrial accidents, workplace crises, economic hardship, pandemics, natural disasters, or other emergencies through lawful charitable activities.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 25</span>
+                                              <h3 class="clause-title">Worker Relief &amp; Emergency Assistance</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Welfare &amp; Relief</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-25" aria-label="Copy Clause 25 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To provide relief, counselling, rehabilitation support, and guidance to workers, employees, students, and their families affected by industrial accidents, workplace crises, economic hardship, pandemics, natural disasters, or other emergencies through lawful charitable activities.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 26 -->
-          <article class="clause-card" data-category="harmony" data-clause="26" id="clause-26">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 26</span>
-                <h3 class="clause-title">Commemorative Programs &amp; Conclaves</h3>
+          <div class="clause-timeline-row" data-category="harmony" data-clause="26" id="clause-26">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">26</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: IR &amp; Events</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-26" aria-label="Copy Clause 26 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To organize and observe professional, national, and international awareness programmes including Labour Day, National Safety Week, World Day for Safety and Health at Work, International HR Day, Constitution Day, HR Conclaves, HR Summits, Industrial Relations Conferences, and other programmes related to employment, labour welfare, workplace safety, skill development, professional excellence, and public awareness.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 26</span>
+                                              <h3 class="clause-title">Commemorative Programs &amp; Conclaves</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: IR &amp; Events</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-26" aria-label="Copy Clause 26 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To organize and observe professional, national, and international awareness programmes including Labour Day, National Safety Week, World Day for Safety and Health at Work, International HR Day, Constitution Day, HR Conclaves, HR Summits, Industrial Relations Conferences, and other programmes related to employment, labour welfare, workplace safety, skill development, professional excellence, and public awareness.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 27 -->
-          <article class="clause-card" data-category="industry" data-clause="27" id="clause-27">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 27</span>
-                <h3 class="clause-title">International Partnerships &amp; ILO Linkages</h3>
+          <div class="clause-timeline-row" data-category="industry" data-clause="27" id="clause-27">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">27</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Global &amp; ILO</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-27" aria-label="Copy Clause 27 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To establish collaboration, affiliation, knowledge-sharing arrangements, exchange programmes, and professional partnerships with the International Labour Organization (ILO), national and international labour institutes, HR associations, employer organizations, worker organizations, trade unions, universities, management institutes, law schools, research organizations, professional bodies, chambers of commerce, CSR institutions, multilateral agencies, and other organizations for education, research, publications, conferences, fellowships, innovation, and professional advancement.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 27</span>
+                                              <h3 class="clause-title">International Partnerships &amp; ILO Linkages</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Global &amp; ILO</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-27" aria-label="Copy Clause 27 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To establish collaboration, affiliation, knowledge-sharing arrangements, exchange programmes, and professional partnerships with the International Labour Organization (ILO), national and international labour institutes, HR associations, employer organizations, worker organizations, trade unions, universities, management institutes, law schools, research organizations, professional bodies, chambers of commerce, CSR institutions, multilateral agencies, and other organizations for education, research, publications, conferences, fellowships, innovation, and professional advancement.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 28 -->
-          <article class="clause-card" data-category="governance" data-clause="28" id="clause-28">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 28</span>
-                <h3 class="clause-title">Professional Ethics &amp; Standards</h3>
+          <div class="clause-timeline-row" data-category="governance" data-clause="28" id="clause-28">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">28</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Governance</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-28" aria-label="Copy Clause 28 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To develop, promote, encourage, and facilitate professional standards, ethical practices, competency frameworks, accreditation systems, certifications, quality benchmarks, HR excellence models, best workplace practices, codes of conduct, governance standards, and institutional excellence in Human Resource Management, Industrial Relations, Labour Welfare, Payroll Administration, Compliance Management, and allied professions.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 28</span>
+                                              <h3 class="clause-title">Professional Ethics &amp; Standards</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Governance</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-28" aria-label="Copy Clause 28 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To develop, promote, encourage, and facilitate professional standards, ethical practices, competency frameworks, accreditation systems, certifications, quality benchmarks, HR excellence models, best workplace practices, codes of conduct, governance standards, and institutional excellence in Human Resource Management, Industrial Relations, Labour Welfare, Payroll Administration, Compliance Management, and allied professions.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 29 -->
-          <article class="clause-card" data-category="governance" data-clause="29" id="clause-29">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 29</span>
-                <h3 class="clause-title">Conducive Public Benefit Activities</h3>
+          <div class="clause-timeline-row" data-category="governance" data-clause="29" id="clause-29">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">29</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Public Benefit</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-29" aria-label="Copy Clause 29 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To undertake any other lawful educational, charitable, scientific, literary, professional, research, social welfare, skill development, employment, labour welfare, industrial relations, human resource management, public policy, innovation, future of work, AI, technology, digital transformation, sustainability, and public benefit activities incidental or conducive to the attainment of the objects of the Company.</p>
-            </div>
-          </article>
+
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 29</span>
+                                              <h3 class="clause-title">Conducive Public Benefit Activities</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Public Benefit</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-29" aria-label="Copy Clause 29 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To undertake any other lawful educational, charitable, scientific, literary, professional, research, social welfare, skill development, employment, labour welfare, industrial relations, human resource management, public policy, innovation, future of work, AI, technology, digital transformation, sustainability, and public benefit activities incidental or conducive to the attainment of the objects of the Company.</p>
+                                          </div>
+            </article>
+          </div>
 
           <!-- Clause 30 -->
-          <article class="clause-card" data-category="governance" data-clause="30" id="clause-30">
-            <div class="clause-card__header">
-              <div class="clause-card__id-group">
-                <span class="clause-badge">Clause 30</span>
-                <h3 class="clause-title">Section 8 Strict Compliance</h3>
+          <div class="clause-timeline-row" data-category="governance" data-clause="30" id="clause-30">
+            <!-- Timeline Step & Node Column -->
+            <div class="clause-timeline-row__left" aria-hidden="true">
+              <div class="clause-timeline-row__step-box">
+                <span class="clause-timeline-row__label">Clause</span>
+                <span class="clause-timeline-row__num">30</span>
               </div>
-              <div class="clause-card__actions">
-                <span class="clause-domain-tag">Domain: Statutory MoA</span>
-                <button type="button" class="clause-copy-btn" data-copy-target="clause-30" aria-label="Copy Clause 30 text">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
+              <div class="clause-timeline-row__dot-wrap">
+                <div class="clause-timeline-row__dot"></div>
               </div>
             </div>
-            <div class="clause-body">
-              <p>To do all such lawful acts, deeds, matters, and things as are incidental or conducive to the attainment of the above objects and to carry out the activities of the Company strictly in accordance with the provisions of Section 8 of the Companies Act, 2013, and other applicable laws, without any profit motive and without distribution of profits or dividends to its members.</p>
-            </div>
-          </article>
 
+            <!-- Clause Content Card Box -->
+            <article class="clause-card">
+              <div class="clause-card__header">
+                                            <div class="clause-card__id-group">
+                                              <span class="clause-badge">Clause 30</span>
+                                              <h3 class="clause-title">Section 8 Strict Compliance</h3>
+                                            </div>
+                                            <div class="clause-card__actions">
+                                              <span class="clause-domain-tag">Domain: Statutory MoA</span>
+                                              <button type="button" class="clause-copy-btn" data-copy-target="clause-30" aria-label="Copy Clause 30 text">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                                <span>Copy</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                          <div class="clause-body">
+                                            <p>To do all such lawful acts, deeds, matters, and things as are incidental or conducive to the attainment of the above objects and to carry out the activities of the Company strictly in accordance with the provisions of Section 8 of the Companies Act, 2013, and other applicable laws, without any profit motive and without distribution of profits or dividends to its members.</p>
+                                          </div>
+            </article>
+          </div>
+
+                  </div>
         </div>
 
         <!-- Empty Results State -->
